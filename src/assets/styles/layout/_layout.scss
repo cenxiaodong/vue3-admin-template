@@ -1,0 +1,68 @@
+/*********** layout ************/
+.layout_fixed_page {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+}
+.layout_open_sider {
+  padding-left: $siderbar-close-width;
+  .layout-content-wrap {
+    width: calc(100% - $siderbar-close-width) !important;
+    .lay_header {
+      left: $siderbar-close-width;
+    }
+  }
+}
+.layout_close_sider {
+  padding-left: $siderbar-open-width;
+  .layout-content-wrap {
+    width: calc(100% - $siderbar-open-width) !important;
+    .lay_header {
+      left: $siderbar-open-width;
+    }
+  }
+}
+.layout-wrap {
+  height: 100vh;
+  border: 1px solid blue;
+  padding-top: $navbar-height;
+  .layout-content-wrap {
+    height: 100%;
+    .lay_header {
+      height: $navbar-height;
+      background: #fff;
+      padding: 0;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 20;
+      .header-left {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+      .header-right {
+        padding-right: 16px;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .lay_card_wrap {
+      height: calc(100vh - $navbar-height);
+      overflow: hidden;
+      overflow-x: scroll;
+      padding: 12px 0 0 12px;
+      background: #f8f8f8;
+      .content-card {
+        height: 100%;
+        overflow: hidden;
+        overflow-y: scroll;
+        min-width: 1200px;
+        background: #fff;
+        border-radius: 5px 0 0 0;
+      }
+    }
+  }
+}

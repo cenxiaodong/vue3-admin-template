@@ -37,3 +37,8 @@ $sidebar-logo-background: var(--sidebar-logo-background); // 侧边栏 Logo 背�
 $sidebar-width: 190px; // 侧边栏宽度
 $sidebar-width-collapsed: 64px; // 侧边栏收缩宽度
 $tags-view-height: 37px; // TagsView 高度
+
+// 进度条颜色
+#nprogress .bar {
+  background: var(--admin-color-primary) !important;
+}

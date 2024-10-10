@@ -41,8 +41,6 @@ export const useMenusStore = defineStore('menus', () => {
       const route = useRoute()
       const asyncRoutes = route.matched[0].children
       menusList.value = filterAsyncRouter(asyncRoutes)
-      console.log(menusList.value)
-
       resolve(menusList.value)
     })
   }

@@ -21,7 +21,12 @@ export const useGlobalConfigStore = defineStore(
       let newThemeColor = appThemeColor.value
       const rootStyle = document.documentElement.style
       rootStyle.setProperty(`--admin-color-primary`, newThemeColor)
-      rootStyle.setProperty(`--admin-color-primary-dark-5`, Color(newThemeColor).alpha(0.1))
+      for (let i = 1; i < 10; i++) {
+        if (i % 2 != 0) {
+          newThemeColor = Color(newThemeColor).alpha(i * 0.1)
+          rootStyle.setProperty(`--admin-color-primary-dark-${i}`, newThemeColor)
+        }
+      }
     }
     // 切换主题颜色
     const toggleThemeColor = (color) => {
@@ -30,9 +35,13 @@ export const useGlobalConfigStore = defineStore(
       let newThemeColor = color
       const rootStyle = document.documentElement.style
       rootStyle.setProperty(`--admin-color-primary`, newThemeColor)
-      rootStyle.setProperty(`--admin-color-primary-dark-5`, Color(newThemeColor).alpha(0.1))
+      for (let i = 1; i < 10; i++) {
+        if (i % 2 != 0) {
+          newThemeColor = Color(newThemeColor).alpha(i * 0.1)
+          rootStyle.setProperty(`--admin-color-primary-dark-${i}`, newThemeColor)
+        }
+      }
     }
-    initThenemeColor()
     return {
       collapsed,
       appThemeColor,

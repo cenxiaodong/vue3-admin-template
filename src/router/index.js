@@ -31,13 +31,13 @@ const router = createRouter({
           children: [
             {
               path: 'orderList',
-              component: () => import('@/views/order/orderList.vue'),
+              component: () => import('@/views/order/OrderList.vue'),
               name: '订单列表',
               meta: { title: '订单列表', icon: 'dashboard', requiresAuth: true }
             },
             {
               path: 'orderDetail',
-              component: () => import('@/views/order/orderDetail.vue'),
+              component: () => import('@/views/order/OrderDetail.vue'),
               name: '订单详情',
               meta: { title: '订单详情', icon: 'dashboard', requiresAuth: true }
             }

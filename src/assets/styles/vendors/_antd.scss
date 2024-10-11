@@ -2,3 +2,11 @@
 .trigger:hover {
   color: var(--admin-color-primary) !important;
 }
+// 按钮
+:where(.css-dev-only-do-not-override-17yhhjv).ant-btn-primary {
+  background-color: var(--admin-color-primary);
+}
+
+:where(.css-dev-only-do-not-override-17yhhjv).ant-btn-primary:not(:disabled):hover {
+  background-color: var(--admin-color-primary-dark-7);
+}

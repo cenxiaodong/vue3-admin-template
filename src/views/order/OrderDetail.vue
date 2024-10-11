@@ -9,6 +9,11 @@ const top = ref(10)
       <a-button type="primary" @click="top += 10">Affix top</a-button>
     </a-affix> -->
     <a-button type="primary" class="aaaa">Affix top</a-button>
+    <a-button type="primary" danger>Primary</a-button>
+    <a-button danger>Default</a-button>
+    <a-button type="dashed" danger>Dashed</a-button>
+    <a-button type="text" danger>Text</a-button>
+    <a-button type="link" danger>Link</a-button>
     <div style="width: 100%; height: 300px; border: 1px solid blue">222</div>
 
     <div style="width: 100%; height: 300px; border: 1px solid yellow">222</div>
